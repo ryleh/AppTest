@@ -16,6 +16,15 @@
 		8D3E1D081D887EE10052A1AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D3E1D061D887EE10052A1AE /* LaunchScreen.storyboard */; };
 		8D3E1D131D887EE10052A1AE /* Appertized_iOS_TestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E1D121D887EE10052A1AE /* Appertized_iOS_TestTests.m */; };
 		8D3E1D1E1D887EE10052A1AE /* Appertized_iOS_TestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E1D1D1D887EE10052A1AE /* Appertized_iOS_TestUITests.m */; };
+		8D3E1D411D88985D0052A1AE /* JsonDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E1D401D88985D0052A1AE /* JsonDataSource.m */; };
+		8D3E1D441D88A2280052A1AE /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E1D431D88A2280052A1AE /* DataManager.m */; };
+		8D3E1D521D88BBB30052A1AE /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E1D481D88BBB30052A1AE /* User.m */; };
+		8D3E1D531D88BBB30052A1AE /* Picture+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E1D4A1D88BBB30052A1AE /* Picture+CoreDataProperties.m */; };
+		8D3E1D541D88BBB30052A1AE /* Picture.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E1D4C1D88BBB30052A1AE /* Picture.m */; };
+		8D3E1D551D88BBB30052A1AE /* Address+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E1D4E1D88BBB30052A1AE /* Address+CoreDataProperties.m */; };
+		8D3E1D561D88BBB30052A1AE /* Address.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E1D501D88BBB30052A1AE /* Address.m */; };
+		8D3E1D651D89D3EC0052A1AE /* UserInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E1D631D89D3EC0052A1AE /* UserInfoCell.m */; };
+		8D3E1D6C1D8A022E0052A1AE /* User+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E1D6B1D8A022E0052A1AE /* User+CoreDataProperties.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +62,25 @@
 		8D3E1D191D887EE10052A1AE /* Appertized-iOS-TestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Appertized-iOS-TestUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D3E1D1D1D887EE10052A1AE /* Appertized_iOS_TestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Appertized_iOS_TestUITests.m; sourceTree = "<group>"; };
 		8D3E1D1F1D887EE10052A1AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D3E1D3D1D88976D0052A1AE /* DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataSource.h; path = Data/DataSource.h; sourceTree = "<group>"; };
+		8D3E1D3F1D88985D0052A1AE /* JsonDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JsonDataSource.h; path = Data/JsonDataSource.h; sourceTree = "<group>"; };
+		8D3E1D401D88985D0052A1AE /* JsonDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JsonDataSource.m; path = Data/JsonDataSource.m; sourceTree = "<group>"; };
+		8D3E1D421D88A2280052A1AE /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataManager.h; path = Data/DataManager.h; sourceTree = "<group>"; };
+		8D3E1D431D88A2280052A1AE /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataManager.m; path = Data/DataManager.m; sourceTree = "<group>"; };
+		8D3E1D471D88BBB30052A1AE /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = Data/User.h; sourceTree = "<group>"; };
+		8D3E1D481D88BBB30052A1AE /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = Data/User.m; sourceTree = "<group>"; };
+		8D3E1D491D88BBB30052A1AE /* Picture+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Picture+CoreDataProperties.h"; path = "Data/Picture+CoreDataProperties.h"; sourceTree = "<group>"; };
+		8D3E1D4A1D88BBB30052A1AE /* Picture+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Picture+CoreDataProperties.m"; path = "Data/Picture+CoreDataProperties.m"; sourceTree = "<group>"; };
+		8D3E1D4B1D88BBB30052A1AE /* Picture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Picture.h; path = Data/Picture.h; sourceTree = "<group>"; };
+		8D3E1D4C1D88BBB30052A1AE /* Picture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Picture.m; path = Data/Picture.m; sourceTree = "<group>"; };
+		8D3E1D4D1D88BBB30052A1AE /* Address+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Address+CoreDataProperties.h"; path = "Data/Address+CoreDataProperties.h"; sourceTree = "<group>"; };
+		8D3E1D4E1D88BBB30052A1AE /* Address+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Address+CoreDataProperties.m"; path = "Data/Address+CoreDataProperties.m"; sourceTree = "<group>"; };
+		8D3E1D4F1D88BBB30052A1AE /* Address.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Address.h; path = Data/Address.h; sourceTree = "<group>"; };
+		8D3E1D501D88BBB30052A1AE /* Address.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Address.m; path = Data/Address.m; sourceTree = "<group>"; };
+		8D3E1D621D89D3EC0052A1AE /* UserInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserInfoCell.h; path = UI/UserInfoCell.h; sourceTree = "<group>"; };
+		8D3E1D631D89D3EC0052A1AE /* UserInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserInfoCell.m; path = UI/UserInfoCell.m; sourceTree = "<group>"; };
+		8D3E1D6A1D8A022E0052A1AE /* User+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "User+CoreDataProperties.h"; path = "Data/User+CoreDataProperties.h"; sourceTree = "<group>"; };
+		8D3E1D6B1D8A022E0052A1AE /* User+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "User+CoreDataProperties.m"; path = "Data/User+CoreDataProperties.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +131,7 @@
 		8D3E1CF41D887EE10052A1AE /* Appertized-iOS-Test */ = {
 			isa = PBXGroup;
 			children = (
+				8D3E1D5A1D89D20D0052A1AE /* UI */,
 				8D3E1CF81D887EE10052A1AE /* AppDelegate.h */,
 				8D3E1CF91D887EE10052A1AE /* AppDelegate.m */,
 				8D3E1CFB1D887EE10052A1AE /* ViewController.h */,
@@ -113,6 +142,7 @@
 				8D3E1D091D887EE10052A1AE /* Info.plist */,
 				8D3E1D011D887EE10052A1AE /* Appertized_iOS_Test.xcdatamodeld */,
 				8D3E1CF51D887EE10052A1AE /* Supporting Files */,
+				8D3E1D3E1D8897750052A1AE /* Data */,
 			);
 			path = "Appertized-iOS-Test";
 			sourceTree = "<group>";
@@ -141,6 +171,39 @@
 				8D3E1D1F1D887EE10052A1AE /* Info.plist */,
 			);
 			path = "Appertized-iOS-TestUITests";
+			sourceTree = "<group>";
+		};
+		8D3E1D3E1D8897750052A1AE /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				8D3E1D6A1D8A022E0052A1AE /* User+CoreDataProperties.h */,
+				8D3E1D6B1D8A022E0052A1AE /* User+CoreDataProperties.m */,
+				8D3E1D471D88BBB30052A1AE /* User.h */,
+				8D3E1D481D88BBB30052A1AE /* User.m */,
+				8D3E1D491D88BBB30052A1AE /* Picture+CoreDataProperties.h */,
+				8D3E1D4A1D88BBB30052A1AE /* Picture+CoreDataProperties.m */,
+				8D3E1D4B1D88BBB30052A1AE /* Picture.h */,
+				8D3E1D4C1D88BBB30052A1AE /* Picture.m */,
+				8D3E1D4D1D88BBB30052A1AE /* Address+CoreDataProperties.h */,
+				8D3E1D4E1D88BBB30052A1AE /* Address+CoreDataProperties.m */,
+				8D3E1D4F1D88BBB30052A1AE /* Address.h */,
+				8D3E1D501D88BBB30052A1AE /* Address.m */,
+				8D3E1D421D88A2280052A1AE /* DataManager.h */,
+				8D3E1D431D88A2280052A1AE /* DataManager.m */,
+				8D3E1D3D1D88976D0052A1AE /* DataSource.h */,
+				8D3E1D3F1D88985D0052A1AE /* JsonDataSource.h */,
+				8D3E1D401D88985D0052A1AE /* JsonDataSource.m */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		8D3E1D5A1D89D20D0052A1AE /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				8D3E1D621D89D3EC0052A1AE /* UserInfoCell.h */,
+				8D3E1D631D89D3EC0052A1AE /* UserInfoCell.m */,
+			);
+			name = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,7 +336,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D3E1D521D88BBB30052A1AE /* User.m in Sources */,
+				8D3E1D531D88BBB30052A1AE /* Picture+CoreDataProperties.m in Sources */,
+				8D3E1D411D88985D0052A1AE /* JsonDataSource.m in Sources */,
+				8D3E1D651D89D3EC0052A1AE /* UserInfoCell.m in Sources */,
+				8D3E1D441D88A2280052A1AE /* DataManager.m in Sources */,
+				8D3E1D6C1D8A022E0052A1AE /* User+CoreDataProperties.m in Sources */,
+				8D3E1D551D88BBB30052A1AE /* Address+CoreDataProperties.m in Sources */,
+				8D3E1D561D88BBB30052A1AE /* Address.m in Sources */,
 				8D3E1CFD1D887EE10052A1AE /* ViewController.m in Sources */,
+				8D3E1D541D88BBB30052A1AE /* Picture.m in Sources */,
 				8D3E1CFA1D887EE10052A1AE /* AppDelegate.m in Sources */,
 				8D3E1D031D887EE10052A1AE /* Appertized_iOS_Test.xcdatamodeld in Sources */,
 				8D3E1CF71D887EE10052A1AE /* main.m in Sources */,
@@ -421,6 +493,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Appertized-iOS-Test/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "Appertized.Appertized-iOS-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -432,6 +505,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Appertized-iOS-Test/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "Appertized.Appertized-iOS-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "DataManager.h"
+#import "JsonDataSource.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +20,19 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    JsonDataSource *data = [[JsonDataSource alloc]init];
+    DataManager *manager = [[DataManager alloc] initWithDataSource:data andContext:[self managedObjectContext]];
+    [manager checkData];
+    
+    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
+    ViewController *controller = (ViewController *)navigationController.topViewController;
+    controller.managedObjectContext = self.managedObjectContext;
+    
+#if TARGET_IPHONE_SIMULATOR
+    // where are you?
+    NSLog(@"Documents Directory: %@", [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject]);
+#endif
+    
     return YES;
 }
 

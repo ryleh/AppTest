@@ -7,9 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<NSFetchedResultsControllerDelegate, UITableViewDataSource, UITableViewDelegate>
 
+
+@property(nonatomic, weak)IBOutlet UITableView*tableView;
+@property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
+@property (nonatomic,strong) NSManagedObjectContext* managedObjectContext;
+@property(nonatomic, weak) IBOutlet UIButton*showMore;
+
+-(IBAction)showMore:(id)sender;
 
 @end
 
