@@ -12,7 +12,7 @@
 
 // Insert code here to add functionality to your managed object subclass
 
--(NSNumber*)calculateAge
+-(NSNumber*)getAge
 {
     NSDateComponents *currYear = [[NSCalendar currentCalendar] components:NSCalendarUnitYear fromDate:[NSDate date]];
     NSDateComponents *dobYear = [[NSCalendar currentCalendar] components:NSCalendarUnitYear fromDate:self.dob];
@@ -25,7 +25,7 @@
     return age;
 }
 
--(NSString *)createFullName
+-(NSString *)getName
 {
     NSString *name = [[NSString alloc] initWithFormat:@"%@ %@ %@", self.title, self.firstName,self.lastName ];
     return name;

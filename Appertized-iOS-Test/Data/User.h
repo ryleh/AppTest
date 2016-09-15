@@ -15,8 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 // Insert code here to declare functionality of your managed object subclass
 
--(NSNumber*)calculateAge;
--(NSString*)createFullName;
+-(NSNumber*)getAge;
+-(NSString*)getName;
 
 @end
 

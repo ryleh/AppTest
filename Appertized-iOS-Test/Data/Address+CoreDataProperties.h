@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, retain) NSString *street;
 @property (nullable, nonatomic, retain) NSString *city;
 @property (nullable, nonatomic, retain) NSString *state;
-@property (nullable, nonatomic, retain) NSNumber *postcode;
+@property (nullable, nonatomic, retain) NSString *postcode;
 @property (nullable, nonatomic, retain) NSSet<User *> *user;
 
 @end

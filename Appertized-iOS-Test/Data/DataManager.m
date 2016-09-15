@@ -54,7 +54,7 @@
     if([users count] == 0)
     {
         // we need to add some users from the data source
-        [self saveData:[self getRandomUsers:50]];
+        [self saveData:[self getRandomUsers:100]];
     }
     else
     {
@@ -82,7 +82,7 @@
             userInfo.title = [name objectForKey:@"title"];
             userInfo.firstName = [name objectForKey:@"first"];
             userInfo.lastName = [name objectForKey:@"last"];
-            userInfo.name = [userInfo createFullName];
+            userInfo.name = [userInfo getName];
             NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
             formatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
             userInfo.dob = [formatter dateFromString:[obj objectForKey:@"dob"]];
@@ -93,6 +93,11 @@
             Address *addressInfo = [NSEntityDescription
                                     insertNewObjectForEntityForName:@"Address"
                                     inManagedObjectContext:_context];
+                         NSDictionary *address = [obj objectForKey:@"location"];
+                        addressInfo.street = [address objectForKey:@"street"];
+                        addressInfo.state = [address objectForKey:@"state"];
+                        addressInfo.postcode =[[NSString alloc] initWithFormat:@"%@", [address objectForKey:@"postcode"]];
+                        addressInfo.city = [address objectForKey:@"city"];
             userInfo.address = addressInfo;
             
             Picture *picInfo = [NSEntityDescription
@@ -103,7 +108,7 @@
             picInfo.medium = [pic objectForKey:@"medium"];
             picInfo.large = [pic objectForKey:@"large"];
             userInfo.picUser = picInfo;
-            userInfo.age = [userInfo calculateAge];
+            userInfo.age = [userInfo getAge];
             
             NSError *error;
             if (![_context save:&error]) {

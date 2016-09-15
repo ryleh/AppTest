@@ -13,18 +13,13 @@
 #import "JsonDataSource.h"
 #import "Picture.h"
 
-int increaseFetchCount()
-{
-    static int currentCount = 0;
-    currentCount +=10;
-    return currentCount;
-}
 
+const static int COUNT = 10;
 
 @interface ViewController ()
 {
-    NSFetchedResultsController *_fetchedController;
     NSUInteger _dataCount;
+    int _resultsCount;
 }
 
 @end
@@ -34,7 +29,9 @@ int increaseFetchCount()
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    _resultsCount = COUNT;
     [self initializeFetchedResultsController];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -42,21 +39,39 @@ int increaseFetchCount()
     // Dispose of any resources that can be recreated.
 }
 
+/* 
+    shows more data in the table. If more data is available in database shows that but if no more records available it requests more to be loaded in from the external data source. Reloads the table and sets the show more button to hidden
+ */
 -(IBAction)showMore:(id)sender
 {
-//    JsonDataSource *data = [[JsonDataSource alloc]init];
-//    DataManager *manager = [[DataManager alloc] initWithDataSource:data andContext:_managedObjectContext];
-//    NSArray* users = [manager getRandomUsers:10];
-//    [manager saveData:users];
-   // increaseFetchCount();
-    [_fetchedController.fetchRequest setFetchLimit:increaseFetchCount()];
-    [_fetchedController performFetch:nil];
-    [_tableView reloadData];
-    [_showMore setHidden:true];
+    if (_resultsCount >= _dataCount)
+    {
+        _resultsCount+=COUNT;
+            JsonDataSource *data = [[JsonDataSource alloc]init];
+            DataManager *manager = [[DataManager alloc] initWithDataSource:data andContext:_managedObjectContext];
+            NSArray* users = [manager getRandomUsers:COUNT];
+            [manager saveData:users];
+        [self.fetchedResultsController.fetchRequest setFetchLimit:_resultsCount];
+            [self getEntityCount];
+    }
+
+    else
+    {
+        _resultsCount+=COUNT;
+        [self.fetchedResultsController.fetchRequest setFetchLimit:_resultsCount];
+        NSError *error;
+        [self.fetchedResultsController performFetch:&error];
+        [self.tableView reloadData];
+    }
+
+    [self.showMore setHidden:true];
 }
 
 #pragma mark fetch results
 
+/*
+ sets up a fetch controller and requests data for users
+ */
 - (void)initializeFetchedResultsController
 {
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"User"];
@@ -64,11 +79,11 @@ int increaseFetchCount()
     NSSortDescriptor *lastNameSort = [NSSortDescriptor sortDescriptorWithKey:@"lastName" ascending:YES];
     
     [request setSortDescriptors:@[lastNameSort]];
-    [request setFetchLimit:increaseFetchCount()];
+    [request setFetchLimit:_resultsCount];
     
-    _fetchedController = [[NSFetchedResultsController alloc] initWithFetchRequest:request managedObjectContext:_managedObjectContext sectionNameKeyPath:nil cacheName:nil];
+    NSFetchedResultsController *fetchedController = [[NSFetchedResultsController alloc] initWithFetchRequest:request managedObjectContext:_managedObjectContext sectionNameKeyPath:nil cacheName:nil];
     
-    [self setFetchedResultsController:_fetchedController];
+    [self setFetchedResultsController:fetchedController];
     [[self fetchedResultsController] setDelegate:self];
     
     NSError *error = nil;
@@ -77,6 +92,21 @@ int increaseFetchCount()
         abort();
     }
     
+    [self getEntityCount];
+
+    
+}
+
+-(void)getEntityCount
+{
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"User"];
+    fetchRequest.resultType = NSCountResultType;
+    NSError *fetchError = nil;
+    _dataCount = [_managedObjectContext countForFetchRequest:fetchRequest error:&fetchError];
+    if (_dataCount == NSNotFound) {
+        NSLog(@"Fetch error: %@", fetchError);
+    }
+    NSLog(@"entity count is %lu", (unsigned long)_dataCount);
 }
 
 #pragma mark - Table view data source
@@ -127,6 +157,9 @@ int increaseFetchCount()
      */
 }
 
+/*
+    checks if scroll is at the end of the table and if so it sets the show more button to visible
+ */
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     CGFloat height = scrollView.frame.size.height;
@@ -137,7 +170,7 @@ int increaseFetchCount()
     
     if(distanceFromBottom <= height)
     {
-        [_showMore setHidden:false];
+        [self.showMore setHidden:false];
     }
 
 }
@@ -145,7 +178,8 @@ int increaseFetchCount()
 #pragma mark - NSFetchedResultsControllerDelegate
 - (void)controllerWillChangeContent:(NSFetchedResultsController *)controller
 {
-    [[self tableView] beginUpdates];
+  //  [[self tableView] beginUpdates];
+    [self.tableView beginUpdates];
 }
 - (void)controller:(NSFetchedResultsController *)controller didChangeSection:(id <NSFetchedResultsSectionInfo>)sectionInfo atIndex:(NSUInteger)sectionIndex forChangeType:(NSFetchedResultsChangeType)type
 {
@@ -179,6 +213,14 @@ int increaseFetchCount()
             break;
     }
 }
+
+- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
+
+   
+    //[self.tableView reloadData];
+    [self.tableView endUpdates];
+}
+
 
 
 @end
