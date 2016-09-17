@@ -10,6 +10,9 @@
 
 @implementation JsonDataSource
 
+/*
+ Get an array of data from the randomuser api and return it
+ */
 -(NSArray *)fetchDataEntries:(int)number
 {
     
@@ -17,7 +20,7 @@
     NSString *url_string = [NSString stringWithFormat: @"http://api.randomuser.me/?results=%d", number];
     NSData *data = [NSData dataWithContentsOfURL: [NSURL URLWithString:url_string]];
     NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-        
+    
     return [json objectForKey:@"results"];
 }
 

@@ -12,6 +12,7 @@
 #import "DataManager.h"
 #import "JsonDataSource.h"
 #import "Picture.h"
+#import "UserDetailViewController.h"
 
 
 const static int COUNT = 10;
@@ -20,6 +21,7 @@ const static int COUNT = 10;
 {
     NSUInteger _dataCount;
     int _resultsCount;
+    NSArray *_pickerData;
 }
 
 @end
@@ -31,6 +33,8 @@ const static int COUNT = 10;
     // Do any additional setup after loading the view, typically from a nib.
     _resultsCount = COUNT;
     [self initializeFetchedResultsController];
+    _pickerData =@[@"Last Name Ascending", @"Last Name Descending", @"Age Ascending", @"Age Descending"];
+
     
 }
 
@@ -63,8 +67,69 @@ const static int COUNT = 10;
         [self.fetchedResultsController performFetch:&error];
         [self.tableView reloadData];
     }
-
+    
     [self.showMore setHidden:true];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:_resultsCount - COUNT inSection:0];
+    [self.tableView scrollToRowAtIndexPath:indexPath
+                          atScrollPosition:UITableViewScrollPositionMiddle
+                                  animated:YES];
+
+}
+
+-(IBAction)sortList:(id)sender
+{
+    [self.sortPicker setHidden:NO];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+
+    if ([segue.identifier isEqualToString:@"userDetail"]) {
+        UserDetailViewController *vc = [segue destinationViewController];
+        [vc setManagedObjectContext:self.managedObjectContext];
+        NSIndexPath *path = self.tableView.indexPathForSelectedRow;
+        NSManagedObject *user = [self.fetchedResultsController objectAtIndexPath:path];
+        [vc setUser:user];
+
+    }
+    
+}
+
+#pragma mark UIPickerViewDelegate Methods
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
+    return 1;
+}
+
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
+    return [_pickerData count];
+}
+
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
+
+    return _pickerData[row];
+}
+-(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
+{
+    NSSortDescriptor *sortDescriptor;
+    
+    switch (row)
+    {
+            case 0:
+            sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"lastName" ascending:YES];
+            break;
+            case 1:
+            sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"lastName" ascending:NO];
+            break;
+            case 2:
+            sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"dob" ascending:YES];
+            break;
+            case 3:
+            sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"dob" ascending:NO];
+            break;
+    }
+    
+    [self.sortPicker setHidden:YES];
+     [self changeSortOrder:sortDescriptor];
+    
 }
 
 #pragma mark fetch results
@@ -81,20 +146,42 @@ const static int COUNT = 10;
     [request setSortDescriptors:@[lastNameSort]];
     [request setFetchLimit:_resultsCount];
     
+    [self createFetchedResultsControllerWithSortOrder:lastNameSort andRequest:request];
+    
+    [self performFetch];
+    
+    [self getEntityCount];
+
+    
+}
+
+-(void)createFetchedResultsControllerWithSortOrder:(NSSortDescriptor*)NSSortDescriptor andRequest:(NSFetchRequest*)request
+{
     NSFetchedResultsController *fetchedController = [[NSFetchedResultsController alloc] initWithFetchRequest:request managedObjectContext:_managedObjectContext sectionNameKeyPath:nil cacheName:nil];
     
     [self setFetchedResultsController:fetchedController];
     [[self fetchedResultsController] setDelegate:self];
-    
+}
+
+-(void)performFetch
+{
     NSError *error = nil;
     if (![[self fetchedResultsController] performFetch:&error]) {
         NSLog(@"Failed to initialize FetchedResultsController: %@\n%@", [error localizedDescription], [error userInfo]);
         abort();
     }
-    
-    [self getEntityCount];
+}
 
+-(void)changeSortOrder:(NSSortDescriptor*)sort
+{
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"User"];
+    [request setSortDescriptors:@[sort]];
+    [request setFetchLimit:_resultsCount];
     
+    self.fetchedResultsController = nil;
+    [self createFetchedResultsControllerWithSortOrder:sort andRequest:request];
+    [self performFetch];
+    [self.tableView reloadData];
 }
 
 -(void)getEntityCount
@@ -148,13 +235,8 @@ const static int COUNT = 10;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    [self performSegueWithIdentifier:@"userDetail" sender:self];
+    
 }
 
 /*
@@ -170,7 +252,11 @@ const static int COUNT = 10;
     
     if(distanceFromBottom <= height)
     {
-        [self.showMore setHidden:false];
+        [self.showMore setHidden:NO];
+    }
+    else
+    {
+        [self.showMore setHidden:YES];
     }
 
 }

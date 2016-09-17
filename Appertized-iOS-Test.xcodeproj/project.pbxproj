@@ -25,6 +25,7 @@
 		8D3E1D561D88BBB30052A1AE /* Address.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E1D501D88BBB30052A1AE /* Address.m */; };
 		8D3E1D651D89D3EC0052A1AE /* UserInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E1D631D89D3EC0052A1AE /* UserInfoCell.m */; };
 		8D3E1D6C1D8A022E0052A1AE /* User+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E1D6B1D8A022E0052A1AE /* User+CoreDataProperties.m */; };
+		8D7B5F661D8D549800BE44DB /* UserDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7B5F651D8D549800BE44DB /* UserDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,8 @@
 		8D3E1D631D89D3EC0052A1AE /* UserInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserInfoCell.m; path = UI/UserInfoCell.m; sourceTree = "<group>"; };
 		8D3E1D6A1D8A022E0052A1AE /* User+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "User+CoreDataProperties.h"; path = "Data/User+CoreDataProperties.h"; sourceTree = "<group>"; };
 		8D3E1D6B1D8A022E0052A1AE /* User+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "User+CoreDataProperties.m"; path = "Data/User+CoreDataProperties.m"; sourceTree = "<group>"; };
+		8D7B5F641D8D549800BE44DB /* UserDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserDetailViewController.h; path = UI/UserDetailViewController.h; sourceTree = "<group>"; };
+		8D7B5F651D8D549800BE44DB /* UserDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserDetailViewController.m; path = UI/UserDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,15 +137,11 @@
 				8D3E1D5A1D89D20D0052A1AE /* UI */,
 				8D3E1CF81D887EE10052A1AE /* AppDelegate.h */,
 				8D3E1CF91D887EE10052A1AE /* AppDelegate.m */,
-				8D3E1CFB1D887EE10052A1AE /* ViewController.h */,
-				8D3E1CFC1D887EE10052A1AE /* ViewController.m */,
-				8D3E1CFE1D887EE10052A1AE /* Main.storyboard */,
 				8D3E1D041D887EE10052A1AE /* Assets.xcassets */,
-				8D3E1D061D887EE10052A1AE /* LaunchScreen.storyboard */,
 				8D3E1D091D887EE10052A1AE /* Info.plist */,
 				8D3E1D011D887EE10052A1AE /* Appertized_iOS_Test.xcdatamodeld */,
-				8D3E1CF51D887EE10052A1AE /* Supporting Files */,
 				8D3E1D3E1D8897750052A1AE /* Data */,
+				8D3E1CF51D887EE10052A1AE /* Supporting Files */,
 			);
 			path = "Appertized-iOS-Test";
 			sourceTree = "<group>";
@@ -200,8 +199,14 @@
 		8D3E1D5A1D89D20D0052A1AE /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				8D7B5F641D8D549800BE44DB /* UserDetailViewController.h */,
+				8D7B5F651D8D549800BE44DB /* UserDetailViewController.m */,
 				8D3E1D621D89D3EC0052A1AE /* UserInfoCell.h */,
 				8D3E1D631D89D3EC0052A1AE /* UserInfoCell.m */,
+				8D3E1CFB1D887EE10052A1AE /* ViewController.h */,
+				8D3E1CFC1D887EE10052A1AE /* ViewController.m */,
+				8D3E1CFE1D887EE10052A1AE /* Main.storyboard */,
+				8D3E1D061D887EE10052A1AE /* LaunchScreen.storyboard */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -344,6 +349,7 @@
 				8D3E1D6C1D8A022E0052A1AE /* User+CoreDataProperties.m in Sources */,
 				8D3E1D551D88BBB30052A1AE /* Address+CoreDataProperties.m in Sources */,
 				8D3E1D561D88BBB30052A1AE /* Address.m in Sources */,
+				8D7B5F661D8D549800BE44DB /* UserDetailViewController.m in Sources */,
 				8D3E1CFD1D887EE10052A1AE /* ViewController.m in Sources */,
 				8D3E1D541D88BBB30052A1AE /* Picture.m in Sources */,
 				8D3E1CFA1D887EE10052A1AE /* AppDelegate.m in Sources */,
@@ -576,6 +582,7 @@
 				8D3E1D241D887EE10052A1AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8D3E1D251D887EE10052A1AE /* Build configuration list for PBXNativeTarget "Appertized-iOS-TestTests" */ = {
 			isa = XCConfigurationList;
@@ -584,6 +591,7 @@
 				8D3E1D271D887EE10052A1AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8D3E1D281D887EE10052A1AE /* Build configuration list for PBXNativeTarget "Appertized-iOS-TestUITests" */ = {
 			isa = XCConfigurationList;
@@ -592,6 +600,7 @@
 				8D3E1D2A1D887EE10052A1AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

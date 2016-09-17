@@ -9,15 +9,18 @@
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 
-@interface ViewController : UIViewController<NSFetchedResultsControllerDelegate, UITableViewDataSource, UITableViewDelegate>
+@interface ViewController : UIViewController<NSFetchedResultsControllerDelegate, UITableViewDataSource, UITableViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource>
 
 
 @property(nonatomic, weak)IBOutlet UITableView*tableView;
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
 @property (nonatomic,strong) NSManagedObjectContext* managedObjectContext;
 @property(nonatomic, weak) IBOutlet UIButton*showMore;
+@property(nonatomic, weak) IBOutlet UIBarButtonItem*sort;
+@property (weak, nonatomic) IBOutlet UIPickerView *sortPicker;
 
 -(IBAction)showMore:(id)sender;
+-(IBAction)sortList:(id)sender;
 
 @end
 
