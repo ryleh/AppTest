@@ -34,7 +34,12 @@ const static int COUNT = 10;
     // Do any additional setup after loading the view, typically from a nib.
     _resultsCount = COUNT;
     [self initializeFetchedResultsController];
+    
+    // create data for the picker view
     _pickerData =@[@"Last Name Ascending", @"Last Name Descending", @"Age Ascending", @"Age Descending"];
+    
+    // set up an initial sort descriptor
+    _pickerSortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"lastName" ascending:YES];
     
 }
 
@@ -149,19 +154,15 @@ const static int COUNT = 10;
 - (void)initializeFetchedResultsController
 {
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"User"];
-    
     NSSortDescriptor *lastNameSort = [NSSortDescriptor sortDescriptorWithKey:@"lastName" ascending:YES];
     
     [request setSortDescriptors:@[lastNameSort]];
     [request setFetchLimit:_resultsCount];
     
     [self createFetchedResultsControllerWithSortOrder:lastNameSort andRequest:request];
-    
     [self performFetch];
-    
     [self getEntityCount];
 
-    
 }
 
 -(void)createFetchedResultsControllerWithSortOrder:(NSSortDescriptor*)NSSortDescriptor andRequest:(NSFetchRequest*)request

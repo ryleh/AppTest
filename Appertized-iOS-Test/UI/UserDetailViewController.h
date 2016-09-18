@@ -8,8 +8,10 @@
 
 #import "ViewController.h"
 #import "User.h"
+#import <MessageUI/MessageUI.h>
 
-@interface UserDetailViewController : UIViewController
+
+@interface UserDetailViewController : UIViewController<MFMailComposeViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *profileImage;
 @property (weak, nonatomic) IBOutlet UILabel *name;
@@ -24,5 +26,8 @@
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (strong, nonatomic) NSManagedObject *user;
+
+-(IBAction)sendEmail:(id)sender;
+-(IBAction)callNumber:(id)sender;
 
 @end

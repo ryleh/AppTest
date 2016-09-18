@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="S1S-d7-Ep8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="S1S-d7-Ep8">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -17,7 +17,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="64" width="768" height="960"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bb-Od-YZI">
@@ -34,10 +34,10 @@
                                 <color key="separatorColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserInfoCell" rowHeight="85" id="sWy-cb-ALi" customClass="UserInfoCell">
-                                        <rect key="frame" x="0.0" y="28" width="333" height="85"/>
+                                        <rect key="frame" x="0.0" y="28" width="728" height="85"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sWy-cb-ALi" id="XAJ-DA-o1P">
-                                            <frame key="frameInset" width="333" height="84"/>
+                                            <frame key="frameInset" width="728" height="84.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1yV-OA-RHM">
@@ -207,7 +207,7 @@
                         <viewControllerLayoutGuide type="bottom" id="6Lg-30-6h3"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" id="w2v-l2-GWw">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="64" width="768" height="960"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="yU4-Rg-gZt">
@@ -283,10 +283,10 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 </variation>
                                                 <variation key="heightClass=regular-widthClass=regular">
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 </variation>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTg-3t-Lzy">
+                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTg-3t-Lzy">
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
@@ -305,8 +305,12 @@
                                                 <variation key="heightClass=regular-widthClass=regular">
                                                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 </variation>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="HRx-st-3jp" appends="YES" id="bye-X5-M2z"/>
+                                                </connections>
                                             </label>
                                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="VUe-0t-UaV">
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="153" id="hhs-EW-5cU"/>
                                                 </constraints>
@@ -338,6 +342,9 @@
                                                 <variation key="heightClass=regular-widthClass=regular">
                                                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 </variation>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="RBT-xR-26f" appends="YES" id="eg8-cR-qQs"/>
+                                                </connections>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZmS-BE-2bV">
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -442,18 +449,20 @@
                                         </subviews>
                                         <variation key="heightClass=compact-widthClass=compact" spacing="4"/>
                                         <variation key="heightClass=regular-widthClass=compact" axis="vertical" spacing="4"/>
-                                        <variation key="heightClass=regular-widthClass=regular" distribution="equalSpacing" spacing="5"/>
+                                        <variation key="heightClass=regular-widthClass=regular" distribution="fillEqually" spacing="10"/>
                                     </stackView>
                                 </subviews>
                                 <variation key="widthClass=regular" axis="horizontal" distribution="fillProportionally"/>
                                 <variation key="heightClass=compact-widthClass=compact" distribution="fillProportionally"/>
                                 <variation key="heightClass=regular-widthClass=compact" axis="vertical" distribution="fillProportionally"/>
+                                <variation key="heightClass=regular-widthClass=regular" axis="vertical" distribution="fill" spacing="30"/>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="6Lg-30-6h3" firstAttribute="top" secondItem="yU4-Rg-gZt" secondAttribute="bottom" constant="150" id="1np-o2-zn7">
-                                <variation key="heightClass=regular-widthClass=regular" constant="250"/>
+                                <variation key="heightClass=regular-widthClass=regular" constant="100"/>
                             </constraint>
                             <constraint firstItem="6Lg-30-6h3" firstAttribute="top" secondItem="yU4-Rg-gZt" secondAttribute="bottom" id="1ok-mK-tUl">
                                 <variation key="heightClass=regular-widthClass=regular" constant="250"/>
@@ -631,6 +640,16 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vx5-uC-4Bc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="RBT-xR-26f">
+                    <connections>
+                        <action selector="sendEmail:" destination="bAp-ut-BEi" id="qlV-iT-maO"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="HRx-st-3jp">
+                    <connections>
+                        <action selector="callNumber:" destination="bAp-ut-BEi" id="WOS-WJ-qau"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2055" y="304.5"/>
         </scene>
