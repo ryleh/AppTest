@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
+  <file original="Appertized-iOS-Test/Base.lproj/LaunchScreen.storyboard" source-language="en" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="8.0" build-num="8A218a"/>
+    </header>
+    <body/>
+  </file>
+  <file original="Appertized-iOS-Test/Base.lproj/Main.storyboard" source-language="en" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="8.0" build-num="8A218a"/>
+    </header>
+    <body>
+      <trans-unit id="1bb-Od-YZI.normalTitle">
+        <source>Show More</source>
+        <note>Class = "UIButton"; normalTitle = "Show More"; ObjectID = "1bb-Od-YZI";</note>
+      </trans-unit>
+      <trans-unit id="6o1-Ba-LKS.text">
+        <source>city</source>
+        <note>Class = "UILabel"; text = "city"; ObjectID = "6o1-Ba-LKS";</note>
+      </trans-unit>
+      <trans-unit id="8R8-xK-9c3.title">
+        <source>Sort</source>
+        <note>Class = "UIBarButtonItem"; title = "Sort"; ObjectID = "8R8-xK-9c3";</note>
+      </trans-unit>
+      <trans-unit id="82i-bG-4M0.title">
+        <source>Users</source>
+        <note>Class = "UINavigationItem"; title = "Users"; ObjectID = "82i-bG-4M0";</note>
+      </trans-unit>
+      <trans-unit id="ILN-nv-YhU.text">
+        <source>Label</source>
+        <note>Class = "UILabel"; text = "Label"; ObjectID = "ILN-nv-YhU";</note>
+      </trans-unit>
+      <trans-unit id="NTg-3t-Lzy.text">
+        <source>Phone: </source>
+        <note>Class = "UILabel"; text = "Phone: "; ObjectID = "NTg-3t-Lzy";</note>
+      </trans-unit>
+      <trans-unit id="VUe-0t-UaV.text">
+        <source>Email: </source>
+        <note>Class = "UILabel"; text = "Email: "; ObjectID = "VUe-0t-UaV";</note>
+      </trans-unit>
+      <trans-unit id="ZmS-BE-2bV.text">
+        <source>Address</source>
+        <note>Class = "UILabel"; text = "Address"; ObjectID = "ZmS-BE-2bV";</note>
+      </trans-unit>
+      <trans-unit id="bM8-uz-WZV.text">
+        <source>Label</source>
+        <note>Class = "UILabel"; text = "Label"; ObjectID = "bM8-uz-WZV";</note>
+      </trans-unit>
+      <trans-unit id="eJL-Ja-T0U.title">
+        <source>User Detail</source>
+        <note>Class = "UINavigationItem"; title = "User Detail"; ObjectID = "eJL-Ja-T0U";</note>
+      </trans-unit>
+      <trans-unit id="l44-H4-flj.text">
+        <source>street</source>
+        <note>Class = "UILabel"; text = "street"; ObjectID = "l44-H4-flj";</note>
+      </trans-unit>
+      <trans-unit id="mH2-p3-dJK.text">
+        <source>Gender: </source>
+        <note>Class = "UILabel"; text = "Gender: "; ObjectID = "mH2-p3-dJK";</note>
+      </trans-unit>
+      <trans-unit id="nh2-Hs-MVh.text">
+        <source>postcode</source>
+        <note>Class = "UILabel"; text = "postcode"; ObjectID = "nh2-Hs-MVh";</note>
+      </trans-unit>
+      <trans-unit id="rSR-Ua-03V.text">
+        <source>state</source>
+        <note>Class = "UILabel"; text = "state"; ObjectID = "rSR-Ua-03V";</note>
+      </trans-unit>
+      <trans-unit id="rdF-xJ-Rck.text">
+        <source>Dob: </source>
+        <note>Class = "UILabel"; text = "Dob: "; ObjectID = "rdF-xJ-Rck";</note>
+      </trans-unit>
+      <trans-unit id="yzm-L7-HF9.text">
+        <source>Name: </source>
+        <note>Class = "UILabel"; text = "Name: "; ObjectID = "yzm-L7-HF9";</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="Appertized-iOS-Test/Info.plist" source-language="en" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="8.0" build-num="8A218a"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleName">
+        <source>$(PRODUCT_NAME)</source>
+      </trans-unit>
+      <trans-unit id="CFBundleShortVersionString">
+        <source>1.0</source>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="Appertized-iOS-Test/Localizable.strings" source-language="en" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="8.0" build-num="8A218a"/>
+    </header>
+    <body>
+      <trans-unit id="AGE_ASCENDING">
+        <source>Age Ascending</source>
+        <note>text for sorting the user list by age ascending</note>
+      </trans-unit>
+      <trans-unit id="AGE_DESCENDING">
+        <source>Age Descending</source>
+        <note>text for sorting the user list by age descending</note>
+      </trans-unit>
+      <trans-unit id="ALERT_OK">
+        <source>Ok</source>
+        <note>Ok button on alert view</note>
+      </trans-unit>
+      <trans-unit id="CANCEL_DELETE">
+        <source>Cancel</source>
+        <note>cancel button for deleting a user alert</note>
+      </trans-unit>
+      <trans-unit id="CONFIRM_DELETE">
+        <source>Delete</source>
+        <note>button title for confirming a delete</note>
+      </trans-unit>
+      <trans-unit id="DELETE_USER">
+        <source>Delete User</source>
+        <note>Title for alert when deleting a user</note>
+      </trans-unit>
+      <trans-unit id="DELETE_USER_MESSAGE">
+        <source>Are you sure you want to delete the user?</source>
+        <note>message for alert when deleting a user</note>
+      </trans-unit>
+      <trans-unit id="NAME_ASCENDING">
+        <source>Last Name Ascending</source>
+        <note>text for sorting the user list by last name ascending</note>
+      </trans-unit>
+      <trans-unit id="NAME_DESCENDING">
+        <source>Last Name Descending</source>
+        <note>text for sorting the user list by last name descending</note>
+      </trans-unit>
+      <trans-unit id="NO_CALL">
+        <source>Can't Make Call</source>
+        <note>text for when a call can't be made on the device</note>
+      </trans-unit>
+      <trans-unit id="NO_CALL_MESSAGE">
+        <source>You can't make a call on this device</source>
+        <note>message for when no call functionality is available on the device</note>
+      </trans-unit>
+      <trans-unit id="NO_EMAIL">
+        <source>No Email</source>
+        <note>text for alert title when no email available</note>
+      </trans-unit>
+      <trans-unit id="NO_EMAIL_MESSAGE">
+        <source>You are unable to send email on this device</source>
+        <note>message for when no email is available on the device</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="Appertized-iOS-TestTests/Info.plist" source-language="en" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="8.0" build-num="8A218a"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleName">
+        <source>$(PRODUCT_NAME)</source>
+      </trans-unit>
+      <trans-unit id="CFBundleShortVersionString">
+        <source>1.0</source>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="Appertized-iOS-TestUITests/Info.plist" source-language="en" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="8.0" build-num="8A218a"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleName">
+        <source>$(PRODUCT_NAME)</source>
+      </trans-unit>
+      <trans-unit id="CFBundleShortVersionString">
+        <source>1.0</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
