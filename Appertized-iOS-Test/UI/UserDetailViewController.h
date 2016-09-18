@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *city;
 @property (weak, nonatomic) IBOutlet UILabel *state;
 @property (weak, nonatomic) IBOutlet UILabel *postcode;
+@property (weak, nonatomic) IBOutlet UILabel *dateOfBirth;
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (strong, nonatomic) NSManagedObject *user;
