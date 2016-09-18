@@ -26,6 +26,7 @@
 		8D3E1D651D89D3EC0052A1AE /* UserInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E1D631D89D3EC0052A1AE /* UserInfoCell.m */; };
 		8D3E1D6C1D8A022E0052A1AE /* User+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E1D6B1D8A022E0052A1AE /* User+CoreDataProperties.m */; };
 		8D7B5F661D8D549800BE44DB /* UserDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7B5F651D8D549800BE44DB /* UserDetailViewController.m */; };
+		8DCBD6921D8EE9E200D290EF /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DCBD6901D8EE81400D290EF /* AsyncImageView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,9 @@
 		8D3E1D6B1D8A022E0052A1AE /* User+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "User+CoreDataProperties.m"; path = "Data/User+CoreDataProperties.m"; sourceTree = "<group>"; };
 		8D7B5F641D8D549800BE44DB /* UserDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserDetailViewController.h; path = UI/UserDetailViewController.h; sourceTree = "<group>"; };
 		8D7B5F651D8D549800BE44DB /* UserDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserDetailViewController.m; path = UI/UserDetailViewController.m; sourceTree = "<group>"; };
+		8DCBD68C1D8EE62A00D290EF /* AsyncImageView */ = {isa = PBXFileReference; lastKnownFileType = folder; name = AsyncImageView; path = "/Users/peterhall/Development/Appertized iOS Test/Appertized-iOS-Test/Appertized-iOS-Test/AsyncImageView"; sourceTree = "<absolute>"; };
+		8DCBD68F1D8EE81400D290EF /* AsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncImageView.h; sourceTree = "<group>"; };
+		8DCBD6901D8EE81400D290EF /* AsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncImageView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +203,8 @@
 		8D3E1D5A1D89D20D0052A1AE /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				8DCBD68F1D8EE81400D290EF /* AsyncImageView.h */,
+				8DCBD6901D8EE81400D290EF /* AsyncImageView.m */,
 				8D7B5F641D8D549800BE44DB /* UserDetailViewController.h */,
 				8D7B5F651D8D549800BE44DB /* UserDetailViewController.m */,
 				8D3E1D621D89D3EC0052A1AE /* UserInfoCell.h */,
@@ -317,6 +323,7 @@
 			files = (
 				8D3E1D081D887EE10052A1AE /* LaunchScreen.storyboard in Resources */,
 				8D3E1D051D887EE10052A1AE /* Assets.xcassets in Resources */,
+				8DCBD68D1D8EE62A00D290EF /* AsyncImageView in Resources */,
 				8D3E1D001D887EE10052A1AE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,6 +349,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DCBD6921D8EE9E200D290EF /* AsyncImageView.m in Sources */,
 				8D3E1D521D88BBB30052A1AE /* User.m in Sources */,
 				8D3E1D531D88BBB30052A1AE /* Picture+CoreDataProperties.m in Sources */,
 				8D3E1D411D88985D0052A1AE /* JsonDataSource.m in Sources */,

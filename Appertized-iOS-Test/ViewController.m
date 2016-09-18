@@ -228,9 +228,10 @@ const static int COUNT = 10;
     cell.gender.text = [user valueForKey:@"gender"];
     Picture *pic = [user valueForKey:@"picUser"];
     NSURL *url = [NSURL URLWithString:pic.small];
-    NSData *data = [NSData dataWithContentsOfURL:url];
-    UIImage *img = [[UIImage alloc] initWithData:data];
-    [cell.imageView setImage:img];
+  //  NSData *data = [NSData dataWithContentsOfURL:url];
+ //   UIImage *img = [[UIImage alloc] initWithData:data];
+    [cell.profileImage setImageURL:url];
+    
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

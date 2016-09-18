@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AsyncImageView.h"
 
 @interface UserInfoCell : UITableViewCell
 
 
 @property(nonatomic, weak)IBOutlet UILabel*name;
 @property(nonatomic, weak)IBOutlet UILabel*gender;
-@property(nonatomic, weak)IBOutlet UIImageView*profileImage;
+@property(nonatomic, weak)IBOutlet AsyncImageView*profileImage;
 
 @end

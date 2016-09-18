@@ -40,7 +40,7 @@
                                             <frame key="frameInset" width="728" height="84.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1yV-OA-RHM">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1yV-OA-RHM" customClass="AsyncImageView">
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="1yV-OA-RHM" secondAttribute="height" multiplier="1:1" id="4lT-dp-gce"/>
                                                     </constraints>
