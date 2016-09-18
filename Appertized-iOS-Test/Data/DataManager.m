@@ -41,6 +41,16 @@
     return self;
 }
 
+// init with just a context
+-(instancetype)initWithContext:(NSManagedObjectContext*)context
+{
+    if (self = [super init]) {
+        _context = context;
+    }
+    
+    return self;
+}
+
 // checks the context to see if user records already exist and if not it fetches some from the data source
 -(void)checkData
 {
@@ -117,6 +127,15 @@
         }];
     }
     
+}
+
+-(void)deleteUser:(NSManagedObject*)user
+{
+    [_context deleteObject:user];
+    NSError *error;
+    if (![_context save:&error]) {
+        NSLog(@"couldn't save: %@", [error localizedDescription]);
+    }
 }
 
 

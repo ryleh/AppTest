@@ -8,6 +8,7 @@
 
 #import "UserDetailViewController.h"
 #import <MessageUI/MessageUI.h>
+#import "DataManager.h"
 
 @interface UserDetailViewController ()
 
@@ -73,7 +74,8 @@
 
 -(IBAction)callNumber:(id)sender
 {
-    NSURL *phoneUrl = [NSURL URLWithString:[self.user valueForKey:@"phone"]];
+    NSString *phNo = [self.user valueForKey:@"phone"];
+    NSURL *phoneUrl = [NSURL URLWithString:[NSString  stringWithFormat:@"telprompt:%@",phNo]];
     
     if ([[UIApplication sharedApplication] canOpenURL:phoneUrl]) {
         [[UIApplication sharedApplication] openURL:phoneUrl];
@@ -99,6 +101,39 @@
     
     
     [alert addAction:okButton];
+    
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+-(IBAction)deleteUser:(id)sender
+{
+ 
+    // display an alert
+    UIAlertController *alert = [UIAlertController
+                                 alertControllerWithTitle:@"Delete User"
+                                 message:@"Are you sure you want to delete the user?"
+                                 preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *cancelBtn = [UIAlertAction
+                                actionWithTitle:@"Cancel"
+                                style:UIAlertActionStyleCancel
+                                handler:^(UIAlertAction * action) {
+                                    [alert dismissViewControllerAnimated:YES completion:nil];
+                                }];
+    
+    UIAlertAction *deleteBtn = [UIAlertAction
+                               actionWithTitle:@"Delete"
+                               style:UIAlertActionStyleDestructive
+                               handler:^(UIAlertAction * action) {
+                                   DataManager *dManager = [[DataManager alloc]initWithContext:self.managedObjectContext];
+                                   [dManager deleteUser:self.user];
+                                   [alert dismissViewControllerAnimated:YES completion:nil];
+                                   [self.navigationController popViewControllerAnimated:YES];
+                               }];
+    
+    
+    [alert addAction:cancelBtn];
+    [alert addAction:deleteBtn];
     
     [self presentViewController:alert animated:YES completion:nil];
 }

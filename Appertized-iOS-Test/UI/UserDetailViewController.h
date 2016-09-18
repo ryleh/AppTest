@@ -29,5 +29,6 @@
 
 -(IBAction)sendEmail:(id)sender;
 -(IBAction)callNumber:(id)sender;
+-(IBAction)deleteUser:(id)sender;
 
 @end

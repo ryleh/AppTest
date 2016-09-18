@@ -14,9 +14,11 @@
 
 
 -(instancetype)initWithDataSource:(id<DataSource>)dataSource andContext:(NSManagedObjectContext*)context;
+-(instancetype)initWithContext:(NSManagedObjectContext*)context;
 
 -(void)checkData;
 -(NSArray*)getRandomUsers:(int)amount;
 -(void)saveData:(NSArray*)data;
+-(void)deleteUser:(NSManagedObject*)user;
 
 @end

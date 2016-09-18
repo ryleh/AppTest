@@ -625,7 +625,14 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="User Detail" id="eJL-Ja-T0U"/>
+                    <navigationItem key="navigationItem" title="User Detail" id="eJL-Ja-T0U">
+                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="Rfw-j3-OXI">
+                            <color key="tintColor" red="0.99439421660000005" green="0.97882089679999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="deleteUser:" destination="bAp-ut-BEi" id="wc6-uB-Z75"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="city" destination="6o1-Ba-LKS" id="Mka-e3-xAr"/>
                         <outlet property="dateOfBirth" destination="rdF-xJ-Rck" id="WgY-aQ-kjg"/>
