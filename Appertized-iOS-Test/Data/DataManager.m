@@ -41,11 +41,15 @@
     return self;
 }
 
-// init with just a context
+// init with just a context and a default data source
 -(instancetype)initWithContext:(NSManagedObjectContext*)context
 {
     if (self = [super init]) {
         _context = context;
+        
+        // default data source
+        JsonDataSource *data = [[JsonDataSource alloc]init];
+        _dataSource = data;
     }
     
     return self;

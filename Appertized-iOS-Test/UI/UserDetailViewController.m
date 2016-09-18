@@ -19,7 +19,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    NSLog(@"user name %@", [self.user valueForKey:@"name"]);
     [self showUserDetails];
 }
 
@@ -67,7 +66,8 @@
     }
     else
     {
-        [self showAlertWithTitle:@"No Email" andMessage:@"You are unable to send email on this device"];
+        [self showAlertWithTitle:NSLocalizedStringWithDefaultValue(@"NO_EMAIL", @"Localizable", [NSBundle mainBundle], @"No Email",                 @"text for alert title when no email available")
+                      andMessage:NSLocalizedStringWithDefaultValue(@"NO_EMAIL_MESSAGE", @"Localizable", [NSBundle mainBundle], @"You are unable to send email on this device", @"message for when no email is available on the device")];
     }
 
 }
@@ -81,7 +81,8 @@
         [[UIApplication sharedApplication] openURL:phoneUrl];
     } else
     {
-        [self showAlertWithTitle:@"Can't Call" andMessage:@"You can't make a phone call on this device"];
+        [self showAlertWithTitle:NSLocalizedStringWithDefaultValue(@"NO_CALL", @"Localizable", [NSBundle mainBundle], @"Can't Make Call", @"text for when a call can't be made on the device")
+                      andMessage:NSLocalizedStringWithDefaultValue(@"NO_CALL_MESSAGE", @"Localizable", [NSBundle mainBundle], @"You can't make a call on this device", @"message for when no call functionality is available on the device")];
     }
 }
 
@@ -93,7 +94,7 @@
                                  preferredStyle:UIAlertControllerStyleAlert];
     
     UIAlertAction* okButton = [UIAlertAction
-                               actionWithTitle:@"Ok"
+                               actionWithTitle:NSLocalizedStringWithDefaultValue(@"ALERT_OK", @"Localizable", [NSBundle mainBundle], @"Ok", @"Ok button on alert view")
                                style:UIAlertActionStyleDefault
                                handler:^(UIAlertAction * action) {
                                    [alert dismissViewControllerAnimated:YES completion:nil];
@@ -110,19 +111,19 @@
  
     // display an alert
     UIAlertController *alert = [UIAlertController
-                                 alertControllerWithTitle:@"Delete User"
-                                 message:@"Are you sure you want to delete the user?"
+                                 alertControllerWithTitle:NSLocalizedStringWithDefaultValue(@"DELETE_USER", @"Localizable", [NSBundle mainBundle], @"Delete User", @"Title for alert when deleting a user")
+                                 message:NSLocalizedStringWithDefaultValue(@"DELETE_USER_MESSAGE", @"Localizable", [NSBundle mainBundle], @"Are you sure you want to delete the user?", @"message for alert when deleting a user")
                                  preferredStyle:UIAlertControllerStyleAlert];
     
     UIAlertAction *cancelBtn = [UIAlertAction
-                                actionWithTitle:@"Cancel"
+                                actionWithTitle:NSLocalizedStringWithDefaultValue(@"CANCEL_DELETE", @"Localizable", [NSBundle mainBundle], @"Cancel", @"cancel button for deleting a user alert")
                                 style:UIAlertActionStyleCancel
                                 handler:^(UIAlertAction * action) {
                                     [alert dismissViewControllerAnimated:YES completion:nil];
                                 }];
     
     UIAlertAction *deleteBtn = [UIAlertAction
-                               actionWithTitle:@"Delete"
+                               actionWithTitle:NSLocalizedStringWithDefaultValue(@"CONFIRM_DELETE", @"Localizable", [NSBundle mainBundle], @"Delete", @"button title for confirming a delete")
                                style:UIAlertActionStyleDestructive
                                handler:^(UIAlertAction * action) {
                                    DataManager *dManager = [[DataManager alloc]initWithContext:self.managedObjectContext];

@@ -27,6 +27,10 @@
 		8D3E1D6C1D8A022E0052A1AE /* User+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E1D6B1D8A022E0052A1AE /* User+CoreDataProperties.m */; };
 		8D7B5F661D8D549800BE44DB /* UserDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7B5F651D8D549800BE44DB /* UserDetailViewController.m */; };
 		8DCBD6921D8EE9E200D290EF /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DCBD6901D8EE81400D290EF /* AsyncImageView.m */; };
+		8DCBD6971D8F1F8E00D290EF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8DCBD6991D8F1F8E00D290EF /* InfoPlist.strings */; };
+		8DCBD69C1D8F1F8E00D290EF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8DCBD69E1D8F1F8E00D290EF /* InfoPlist.strings */; };
+		8DCBD6A11D8F1F8F00D290EF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8DCBD6A31D8F1F8F00D290EF /* InfoPlist.strings */; };
+		8DCBD6A61D8F1F8F00D290EF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8DCBD6A81D8F1F8F00D290EF /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,9 +89,14 @@
 		8D3E1D6B1D8A022E0052A1AE /* User+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "User+CoreDataProperties.m"; path = "Data/User+CoreDataProperties.m"; sourceTree = "<group>"; };
 		8D7B5F641D8D549800BE44DB /* UserDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserDetailViewController.h; path = UI/UserDetailViewController.h; sourceTree = "<group>"; };
 		8D7B5F651D8D549800BE44DB /* UserDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserDetailViewController.m; path = UI/UserDetailViewController.m; sourceTree = "<group>"; };
-		8DCBD68C1D8EE62A00D290EF /* AsyncImageView */ = {isa = PBXFileReference; lastKnownFileType = folder; name = AsyncImageView; path = "/Users/peterhall/Development/Appertized iOS Test/Appertized-iOS-Test/Appertized-iOS-Test/AsyncImageView"; sourceTree = "<absolute>"; };
 		8DCBD68F1D8EE81400D290EF /* AsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncImageView.h; sourceTree = "<group>"; };
 		8DCBD6901D8EE81400D290EF /* AsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncImageView.m; sourceTree = "<group>"; };
+		8DCBD6931D8F14DB00D290EF /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		8DCBD6941D8F14DB00D290EF /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		8DCBD6981D8F1F8E00D290EF /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8DCBD69D1D8F1F8E00D290EF /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8DCBD6A21D8F1F8F00D290EF /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8DCBD6A71D8F1F8F00D290EF /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +162,8 @@
 		8D3E1CF51D887EE10052A1AE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8DCBD6A81D8F1F8F00D290EF /* Localizable.strings */,
+				8DCBD69E1D8F1F8E00D290EF /* InfoPlist.strings */,
 				8D3E1CF61D887EE10052A1AE /* main.m */,
 			);
 			name = "Supporting Files";
@@ -161,6 +172,7 @@
 		8D3E1D111D887EE10052A1AE /* Appertized-iOS-TestTests */ = {
 			isa = PBXGroup;
 			children = (
+				8DCBD6991D8F1F8E00D290EF /* InfoPlist.strings */,
 				8D3E1D121D887EE10052A1AE /* Appertized_iOS_TestTests.m */,
 				8D3E1D141D887EE10052A1AE /* Info.plist */,
 			);
@@ -170,6 +182,7 @@
 		8D3E1D1C1D887EE10052A1AE /* Appertized-iOS-TestUITests */ = {
 			isa = PBXGroup;
 			children = (
+				8DCBD6A31D8F1F8F00D290EF /* InfoPlist.strings */,
 				8D3E1D1D1D887EE10052A1AE /* Appertized_iOS_TestUITests.m */,
 				8D3E1D1F1D887EE10052A1AE /* Info.plist */,
 			);
@@ -321,9 +334,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DCBD6A61D8F1F8F00D290EF /* Localizable.strings in Resources */,
 				8D3E1D081D887EE10052A1AE /* LaunchScreen.storyboard in Resources */,
+				8DCBD69C1D8F1F8E00D290EF /* InfoPlist.strings in Resources */,
 				8D3E1D051D887EE10052A1AE /* Assets.xcassets in Resources */,
-				8DCBD68D1D8EE62A00D290EF /* AsyncImageView in Resources */,
 				8D3E1D001D887EE10052A1AE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,6 +346,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DCBD6971D8F1F8E00D290EF /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +354,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DCBD6A11D8F1F8F00D290EF /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,6 +419,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				8D3E1CFF1D887EE10052A1AE /* Base */,
+				8DCBD6931D8F14DB00D290EF /* fr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -411,8 +428,41 @@
 			isa = PBXVariantGroup;
 			children = (
 				8D3E1D071D887EE10052A1AE /* Base */,
+				8DCBD6941D8F14DB00D290EF /* fr */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		8DCBD6991D8F1F8E00D290EF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8DCBD6981D8F1F8E00D290EF /* fr */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8DCBD69E1D8F1F8E00D290EF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8DCBD69D1D8F1F8E00D290EF /* fr */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8DCBD6A31D8F1F8F00D290EF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8DCBD6A21D8F1F8F00D290EF /* fr */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8DCBD6A81D8F1F8F00D290EF /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8DCBD6A71D8F1F8F00D290EF /* fr */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -422,6 +472,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -469,6 +520,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";

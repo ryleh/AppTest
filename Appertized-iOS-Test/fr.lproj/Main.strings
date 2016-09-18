@@ -1,0 +1,48 @@
+/* Class = "UIButton"; normalTitle = "Show More"; ObjectID = "1bb-Od-YZI"; */
+"1bb-Od-YZI.normalTitle" = "Montre plus";
+
+/* Class = "UILabel"; text = "city"; ObjectID = "6o1-Ba-LKS"; */
+"6o1-Ba-LKS.text" = "ville";
+
+/* Class = "UIBarButtonItem"; title = "Sort"; ObjectID = "8R8-xK-9c3"; */
+"8R8-xK-9c3.title" = "Trier";
+
+/* Class = "UINavigationItem"; title = "Users"; ObjectID = "82i-bG-4M0"; */
+"82i-bG-4M0.title" = "Utilisateurs";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ILN-nv-YhU"; */
+"ILN-nv-YhU.text" = "Label";
+
+/* Class = "UILabel"; text = "Phone: "; ObjectID = "NTg-3t-Lzy"; */
+"NTg-3t-Lzy.text" = "Téléphone: ";
+
+/* Class = "UILabel"; text = "Email: "; ObjectID = "VUe-0t-UaV"; */
+"VUe-0t-UaV.text" = "Email: ";
+
+/* Class = "UILabel"; text = "Address"; ObjectID = "ZmS-BE-2bV"; */
+"ZmS-BE-2bV.text" = "Adresse";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "bM8-uz-WZV"; */
+"bM8-uz-WZV.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "User Detail"; ObjectID = "eJL-Ja-T0U"; */
+"eJL-Ja-T0U.title" = "Détail de l'utilisateur";
+
+/* Class = "UILabel"; text = "street"; ObjectID = "l44-H4-flj"; */
+"l44-H4-flj.text" = "rue";
+
+/* Class = "UILabel"; text = "Gender: "; ObjectID = "mH2-p3-dJK"; */
+"mH2-p3-dJK.text" = "Le genre: ";
+
+/* Class = "UILabel"; text = "postcode"; ObjectID = "nh2-Hs-MVh"; */
+"nh2-Hs-MVh.text" = "code postal";
+
+/* Class = "UILabel"; text = "state"; ObjectID = "rSR-Ua-03V"; */
+"rSR-Ua-03V.text" = "Etat";
+
+/* Class = "UILabel"; text = "Dob: "; ObjectID = "rdF-xJ-Rck"; */
+"rdF-xJ-Rck.text" = "Né(e)le: ";
+
+/* Class = "UILabel"; text = "Name: "; ObjectID = "yzm-L7-HF9"; */
+"yzm-L7-HF9.text" = "Nom: ";
+

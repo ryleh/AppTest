@@ -35,8 +35,14 @@ const static int COUNT = 10;
     _resultsCount = COUNT;
     [self initializeFetchedResultsController];
     
+
+    
     // create data for the picker view
-    _pickerData =@[@"Last Name Ascending", @"Last Name Descending", @"Age Ascending", @"Age Descending"];
+    
+    _pickerData =@[NSLocalizedStringWithDefaultValue(@"NAME_ASCENDING", @"Localizable", [NSBundle mainBundle], @"Last Name Ascending", @"text for sorting the user list by last name ascending")
+                   , NSLocalizedStringWithDefaultValue(@"NAME_DESCENDING", @"Localizable", [NSBundle mainBundle], @"Last Name Descending", @"text for sorting the user list by last name descending"),
+                   NSLocalizedStringWithDefaultValue(@"AGE_ASCENDING", @"Localizable", [NSBundle mainBundle], @"Age Ascending", @"text for sorting the user list by age ascending"),
+                   NSLocalizedStringWithDefaultValue(@"AGE_DESCENDING", @"Localizable", [NSBundle mainBundle], @"Age Descending", @"text for sorting the user list by age descending")];
     
     // set up an initial sort descriptor
     _pickerSortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"lastName" ascending:YES];

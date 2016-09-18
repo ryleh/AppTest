@@ -1,0 +1,39 @@
+/* text for sorting the user list by age ascending */
+"AGE_ASCENDING" = "Âge croissant";
+
+/* text for sorting the user list by age descending */
+"AGE_DESCENDING" = "Age décroissant";
+
+/* Ok button on alert view */
+"ALERT_OK" = "D'accord";
+
+/* cancel button for deleting a user alert */
+"CANCEL_DELETE" = "Annuler";
+
+/* button title for confirming a delete */
+"CONFIRM_DELETE" = "Effacer";
+
+/* Title for alert when deleting a user */
+"DELETE_USER" = "Supprimer l'utilisateur";
+
+/* message for alert when deleting a user */
+"DELETE_USER_MESSAGE" = "Êtes-vous sûr de vouloir supprimer l'utilisateur ?";
+
+/* text for sorting the user list by last name ascending */
+"NAME_ASCENDING" = "Nom Croissant";
+
+/* text for sorting the user list by last name descending */
+"NAME_DESCENDING" = "Nom décroissant";
+
+/* text for when a call can't be made on the device */
+"NO_CALL" = "On ne fait pas appel";
+
+/* message for when no call functionality is available on the device */
+"NO_CALL_MESSAGE" = "Vous ne pouvez pas faire un appel sur cet appareil";
+
+/* text for alert title when no email available */
+"NO_EMAIL" = "Aucun Email";
+
+/* message for when no email is available on the device */
+"NO_EMAIL_MESSAGE" = "Vous n'êtes pas en mesure d'envoyer des e-mails sur cet appareil";
+
