@@ -102,8 +102,7 @@
             userInfo.dob = [formatter dateFromString:[obj objectForKey:@"dob"]];
             userInfo.email = [obj objectForKey:@"email"];
             userInfo.phone = [obj objectForKey:@"phone"];
-            userInfo.gender = [obj objectForKey:@"gender"];
-            
+            userInfo.gender = [self getLocalizedGender:[obj valueForKey:@"gender"]];
             Address *addressInfo = [NSEntityDescription
                                     insertNewObjectForEntityForName:@"Address"
                                     inManagedObjectContext:_context];
@@ -142,5 +141,21 @@
     }
 }
 
+-(NSString*)getLocalizedGender:(NSString*)gender
+{
+    if ([gender  isEqual: @"male"])
+    {
+        return NSLocalizedStringWithDefaultValue(@"GENDER_MALE", @"Localizable", [NSBundle mainBundle], @"Male", @"male gender for user");
+    }
+    else if ([gender isEqual:@"female"])
+    {
+        return NSLocalizedStringWithDefaultValue(@"GENDER_FEMALE", @"Localizable", [NSBundle mainBundle], @"Female", @"Female gender for user");
+    }
+    else
+    {
+        return gender;
+    }
+
+}
 
 @end

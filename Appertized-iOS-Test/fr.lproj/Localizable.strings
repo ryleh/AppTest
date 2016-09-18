@@ -19,6 +19,12 @@
 /* message for alert when deleting a user */
 "DELETE_USER_MESSAGE" = "Êtes-vous sûr de vouloir supprimer l'utilisateur ?";
 
+/* Female gender for user */
+"GENDER_FEMALE" = "Femelle";
+
+/* male gender for user */
+"GENDER_MALE" = "Mâle";
+
 /* text for sorting the user list by last name ascending */
 "NAME_ASCENDING" = "Nom Croissant";
 

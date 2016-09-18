@@ -162,8 +162,7 @@
 		8D3E1CF51D887EE10052A1AE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				8DCBD6A81D8F1F8F00D290EF /* Localizable.strings */,
-				8DCBD69E1D8F1F8E00D290EF /* InfoPlist.strings */,
+				8DCBD6A91D8F24D500D290EF /* fr strings */,
 				8D3E1CF61D887EE10052A1AE /* main.m */,
 			);
 			name = "Supporting Files";
@@ -228,6 +227,15 @@
 				8D3E1D061D887EE10052A1AE /* LaunchScreen.storyboard */,
 			);
 			name = UI;
+			sourceTree = "<group>";
+		};
+		8DCBD6A91D8F24D500D290EF /* fr strings */ = {
+			isa = PBXGroup;
+			children = (
+				8DCBD6A81D8F1F8F00D290EF /* Localizable.strings */,
+				8DCBD69E1D8F1F8E00D290EF /* InfoPlist.strings */,
+			);
+			name = "fr strings";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
