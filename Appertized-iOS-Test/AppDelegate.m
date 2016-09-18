@@ -28,11 +28,6 @@
     ViewController *controller = (ViewController *)navigationController.topViewController;
     controller.managedObjectContext = self.managedObjectContext;
     
-#if TARGET_IPHONE_SIMULATOR
-    // where are you?
-    NSLog(@"Documents Directory: %@", [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject]);
-#endif
-    
     return YES;
 }
 

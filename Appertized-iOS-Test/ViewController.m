@@ -34,7 +34,6 @@ const static int COUNT = 10;
     _resultsCount = COUNT;
     [self initializeFetchedResultsController];
     _pickerData =@[@"Last Name Ascending", @"Last Name Descending", @"Age Ascending", @"Age Descending"];
-
     
 }
 
@@ -42,6 +41,7 @@ const static int COUNT = 10;
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 /* 
     shows more data in the table. If more data is available in database shows that but if no more records available it requests more to be loaded in from the external data source. Reloads the table and sets the show more button to hidden
@@ -78,7 +78,7 @@ const static int COUNT = 10;
 
 -(IBAction)sortList:(id)sender
 {
-    [self.sortPicker setHidden:NO];
+    [self.pickerView setHidden:NO];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -127,7 +127,7 @@ const static int COUNT = 10;
             break;
     }
     
-    [self.sortPicker setHidden:YES];
+    [self.pickerView setHidden:YES];
      [self changeSortOrder:sortDescriptor];
     
 }

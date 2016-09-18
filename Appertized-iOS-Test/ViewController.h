@@ -18,6 +18,7 @@
 @property(nonatomic, weak) IBOutlet UIButton*showMore;
 @property(nonatomic, weak) IBOutlet UIBarButtonItem*sort;
 @property (weak, nonatomic) IBOutlet UIPickerView *sortPicker;
+@property (weak, nonatomic) IBOutlet UIView *pickerView;
 
 -(IBAction)showMore:(id)sender;
 -(IBAction)sortList:(id)sender;
