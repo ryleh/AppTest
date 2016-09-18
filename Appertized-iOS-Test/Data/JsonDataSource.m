@@ -15,13 +15,26 @@
  */
 -(NSArray *)fetchDataEntries:(int)number
 {
+    if (number > 0)
+    {
+        NSError *error;
+        NSString *url_string = [NSString stringWithFormat: @"http://api.randomuser.me/?results=%d", number];
+        NSData *data = [NSData dataWithContentsOfURL: [NSURL URLWithString:url_string]];
+        
+        if (data != nil)
+        {
+            NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+            if (!error)
+            {
+                return [json objectForKey:@"results"];
+            }
+        }
+        
+        
+    }
     
-    NSError *error;
-    NSString *url_string = [NSString stringWithFormat: @"http://api.randomuser.me/?results=%d", number];
-    NSData *data = [NSData dataWithContentsOfURL: [NSURL URLWithString:url_string]];
-    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+    return nil;
     
-    return [json objectForKey:@"results"];
 }
 
 
