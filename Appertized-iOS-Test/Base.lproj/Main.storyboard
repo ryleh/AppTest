@@ -37,7 +37,7 @@
                                         <rect key="frame" x="0.0" y="28" width="278" height="85"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sWy-cb-ALi" id="XAJ-DA-o1P">
-                                            <frame key="frameInset" width="278" height="84.5"/>
+                                            <frame key="frameInset" width="278" height="84"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1yV-OA-RHM">
@@ -94,10 +94,16 @@
                                         <items>
                                             <barButtonItem systemItem="cancel" id="Fkj-ZX-TBd">
                                                 <color key="tintColor" red="0.99439421660000005" green="0.97882089679999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="cancelSort:" destination="BYZ-38-t0r" id="ve4-Yq-NI4"/>
+                                                </connections>
                                             </barButtonItem>
                                             <barButtonItem style="plain" systemItem="flexibleSpace" id="Phh-0L-FZZ"/>
                                             <barButtonItem style="done" systemItem="done" id="5yh-rS-Fce">
                                                 <color key="tintColor" red="0.99439421660000005" green="0.97882089679999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="confirmSort:" destination="BYZ-38-t0r" id="9jO-u8-90e"/>
+                                                </connections>
                                             </barButtonItem>
                                         </items>
                                         <color key="barTintColor" red="0.60368612150000001" green="0.76618360860000001" blue="0.75190412750000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -178,6 +184,8 @@
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="pickerCancel" destination="Fkj-ZX-TBd" id="ZSL-ej-evu"/>
+                        <outlet property="pickerDone" destination="5yh-rS-Fce" id="wQk-hj-Efg"/>
                         <outlet property="pickerView" destination="qV0-ww-j20" id="geP-qY-Wwg"/>
                         <outlet property="showMore" destination="1bb-Od-YZI" id="Zhh-jH-JUC"/>
                         <outlet property="sort" destination="8R8-xK-9c3" id="wqS-C3-QzI"/>

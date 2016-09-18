@@ -19,9 +19,13 @@
 @property(nonatomic, weak) IBOutlet UIBarButtonItem*sort;
 @property (weak, nonatomic) IBOutlet UIPickerView *sortPicker;
 @property (weak, nonatomic) IBOutlet UIView *pickerView;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *pickerDone;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *pickerCancel;
 
 -(IBAction)showMore:(id)sender;
 -(IBAction)sortList:(id)sender;
+-(IBAction)confirmSort:(id)sender;
+-(IBAction)cancelSort:(id)sender;
 
 @end
 

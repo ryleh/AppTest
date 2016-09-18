@@ -22,6 +22,7 @@ const static int COUNT = 10;
     NSUInteger _dataCount;
     int _resultsCount;
     NSArray *_pickerData;
+    NSSortDescriptor *_pickerSortDescriptor;
 }
 
 @end
@@ -94,6 +95,19 @@ const static int COUNT = 10;
     
 }
 
+-(IBAction)confirmSort:(id)sender {
+    
+    [self.pickerView setHidden:YES];
+    [self changeSortOrder:_pickerSortDescriptor];
+
+}
+
+-(IBAction)cancelSort:(id)sender
+{
+    [self.pickerView setHidden:YES];
+
+}
+
 #pragma mark UIPickerViewDelegate Methods
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
     return 1;
@@ -109,26 +123,21 @@ const static int COUNT = 10;
 }
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
-    NSSortDescriptor *sortDescriptor;
-    
     switch (row)
     {
             case 0:
-            sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"lastName" ascending:YES];
+            _pickerSortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"lastName" ascending:YES];
             break;
             case 1:
-            sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"lastName" ascending:NO];
+            _pickerSortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"lastName" ascending:NO];
             break;
             case 2:
-            sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"dob" ascending:YES];
+            _pickerSortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"dob" ascending:YES];
             break;
             case 3:
-            sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"dob" ascending:NO];
+            _pickerSortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"dob" ascending:NO];
             break;
     }
-    
-    [self.pickerView setHidden:YES];
-     [self changeSortOrder:sortDescriptor];
     
 }
 
