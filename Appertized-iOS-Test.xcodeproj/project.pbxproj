@@ -55,8 +55,8 @@
 		8D3E1CF61D887EE10052A1AE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8D3E1CF81D887EE10052A1AE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8D3E1CF91D887EE10052A1AE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8D3E1CFB1D887EE10052A1AE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8D3E1CFC1D887EE10052A1AE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8D3E1CFB1D887EE10052A1AE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = UI/ViewController.h; sourceTree = "<group>"; };
+		8D3E1CFC1D887EE10052A1AE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = UI/ViewController.m; sourceTree = "<group>"; };
 		8D3E1CFF1D887EE10052A1AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8D3E1D021D887EE10052A1AE /* Appertized_iOS_Test.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Appertized_iOS_Test.xcdatamodel; sourceTree = "<group>"; };
 		8D3E1D041D887EE10052A1AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -89,8 +89,8 @@
 		8D3E1D6B1D8A022E0052A1AE /* User+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "User+CoreDataProperties.m"; path = "Data/User+CoreDataProperties.m"; sourceTree = "<group>"; };
 		8D7B5F641D8D549800BE44DB /* UserDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserDetailViewController.h; path = UI/UserDetailViewController.h; sourceTree = "<group>"; };
 		8D7B5F651D8D549800BE44DB /* UserDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserDetailViewController.m; path = UI/UserDetailViewController.m; sourceTree = "<group>"; };
-		8DCBD68F1D8EE81400D290EF /* AsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncImageView.h; sourceTree = "<group>"; };
-		8DCBD6901D8EE81400D290EF /* AsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncImageView.m; sourceTree = "<group>"; };
+		8DCBD68F1D8EE81400D290EF /* AsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AsyncImageView.h; path = UI/AsyncImageView.h; sourceTree = "<group>"; };
+		8DCBD6901D8EE81400D290EF /* AsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AsyncImageView.m; path = UI/AsyncImageView.m; sourceTree = "<group>"; };
 		8DCBD6931D8F14DB00D290EF /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
 		8DCBD6941D8F14DB00D290EF /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		8DCBD6981D8F1F8E00D290EF /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -152,7 +152,6 @@
 				8D3E1CF91D887EE10052A1AE /* AppDelegate.m */,
 				8D3E1D041D887EE10052A1AE /* Assets.xcassets */,
 				8D3E1D091D887EE10052A1AE /* Info.plist */,
-				8D3E1D011D887EE10052A1AE /* Appertized_iOS_Test.xcdatamodeld */,
 				8D3E1D3E1D8897750052A1AE /* Data */,
 				8D3E1CF51D887EE10052A1AE /* Supporting Files */,
 			);
@@ -191,6 +190,7 @@
 		8D3E1D3E1D8897750052A1AE /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				8D3E1D011D887EE10052A1AE /* Appertized_iOS_Test.xcdatamodeld */,
 				8D3E1D6A1D8A022E0052A1AE /* User+CoreDataProperties.h */,
 				8D3E1D6B1D8A022E0052A1AE /* User+CoreDataProperties.m */,
 				8D3E1D471D88BBB30052A1AE /* User.h */,
